@@ -1,0 +1,25 @@
+%{
+//Ejemplo del examen
+#include<conio.h>
+#include<stdio.h>
+%}
+
+pa [aA]
+pe [eE]
+pi [iI]
+po [oO]
+pu [uU]
+noaeiou [^aeiouAEIOU]
+acepta {noaeiou}*{pa}{noaeiou}*{pe}{noaeiou}*{pi}{noaeiou}*{po}{noaeiou}*{pu}{noaeiou}*
+esp [ \t\n]
+%%
+{acepta} {printf("Cadena: %s Aceptada\n",yytext);}
+{esp} ;
+%%
+void main(void)
+{
+clrscr();
+printf("Programa del examen\n\n");
+yylex();
+getch();
+}

@@ -1,0 +1,21 @@
+%{
+/* Ejemplo Contador de caracteres, palabras y lineas
+*/
+#include <stdio.h>
+#include <conio.h>
+int palabras=0, caracteres=0, lineas=0;
+%}
+%%
+[A-Za_z0-9] {++palabras; caracteres+=yyleng;}
+\n {++lineas; +caracteres;}
+. {++caracteres;}
+%%
+main ()
+{
+yyin=fopen("c:\\turboc3\\bin\\flex\\ent.txt","rt");
+clrscr();
+yylex();
+printf("Caracteres: %d\n",caracteres);
+printf("Palabras: %d\n",palabras);
+printf("Lineas: %d\n",lineas);
+}

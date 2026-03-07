@@ -1,0 +1,11 @@
+%{
+/* elimina las letras mayusculas */
+%}
+%%
+[A-Z]+  ;
+%%
+void main(void)
+{
+/*yyin=fopen("c:\tc\bin\flex\ejemplo.txt","rt");*/
+yylex();
+}

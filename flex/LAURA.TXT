@@ -1,0 +1,4 @@
+Ejemplo de programa en flex
+Ok
+saludos
+buen fin de semana

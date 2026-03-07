@@ -1,0 +1,40 @@
+
+%% end of prolog
+case 1:
+# line 19 "robot.l"
+{lineas++;}
+	YY_BREAK
+case 2:
+# line 20 "robot.l"
+{  if(yyleng > 8)
+	 	
+	else {
+		i = 0;
+		while(i < 9)
+		{
+			if(strcmp(yytext, palabras[i].palabra) == 0)
+			{
+				return palabras[i].word;
+				break;
+			}
+			i++;
+		}
+		return ID;
+	} }
+	YY_BREAK
+case 3:
+# line 35 "robot.l"
+{   return CONSTANTE;}
+	YY_BREAK
+case 4:
+# line 36 "robot.l"
+{ return MAS;}
+	YY_BREAK
+case 5:
+# line 37 "robot.l"
+{ return MENOS;}
+	YY_BREAK
+case 6:
+# line 38 "robot.l"
+{ return PRODUCTO;}
+	YY
