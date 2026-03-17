@@ -1,0 +1,6 @@
+Adelante
+Izquierda
+Adelante
+Derecha
+Atras
+Alto
