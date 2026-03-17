@@ -1,0 +1,42 @@
+%{
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "c:\tc\bin\flex\lexyy.c"
+int nlinea=1;
+void yyerror(char*);
+char temp[256];
+%}
+%union
+{
+  int constante;
+}
+%token <constante> NUM
+%token VAR
+%token PCO
+%token SUB ADD
+%start programa
+%%
+programa	: exp PCO
+	      ;
+exp		:
+	      | VAR {strcpy(temp,yytext);} ADD VAR {strcat(temp,yytext); printf("%s\n",temp);}
+	      | VAR {strcpy(temp,yytext);} SUB NUM {}
+	      ;
+%%
+void main(void)
+{
+clrscr();
+yyin=fopen("c:\\tc\\bin\\bison\\laura.txt","r");
+yyout=fopen("c:\\tc\\bin\\bison\\salida.txt","w");
+
+printf("\nSegundo traductor");
+printf("\nTraduciendo ...\n");
+yyparse();
+}
+
+/* subrutina de error */
+void yyerror (char *s)
+{
+  printf ("Error en linea %d : %s\n", nlinea, s);
+}
