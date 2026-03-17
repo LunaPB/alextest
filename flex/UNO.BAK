@@ -1,0 +1,24 @@
+%{
+/* Reconocedor lexico Musim */
+#include "c:\tc\bin\bison\dos.h"
+int nlinea=1;
+%}
+%%
+[M] {return PRM;}
+[a-z] {yylval.identificador=yytext[0];return ID;}
+[0-9] {yylval.constante=yytext[0];return NUM;}
+[+] {return ADD;}
+[-] {return SUB;}
+[*] {return MUL;}
+[/] {return DIV;}
+[%] {return MOD;}
+[=] {return IGU;}
+[(] {return PAI;}
+[)] {return PAD;}
+[{] {return LLI;}
+[}] {return LLD;}
+[;] {return PCO;}
+[W] {return PRW;}
+[R] {return PRR;}
+[\n]  {nlinea++;}
+%%

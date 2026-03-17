@@ -1,0 +1,215 @@
+
+ Start  Stop   Length Name               Class
+
+ 00000H 017EDH 017EEH _TEXT              CODE
+ 017F0H 017F0H 00000H _FARDATA           FAR_DATA
+ 017F0H 017F0H 00000H _FARBSS            FAR_BSS
+ 017F0H 017F0H 00000H _OVERLAY_          OVRINFO
+ 017F0H 017F0H 00000H _1STUB_            STUBSEG
+ 017F0H 01B75H 00386H _DATA              DATA
+ 01B76H 01B77H 00002H _CVTSEG            DATA
+ 01B78H 01B7DH 00006H _SCNSEG            DATA
+ 01B7EH 01B7EH 00000H _CONST             CONST
+ 01B7EH 01B83H 00006H _INIT_             INITDATA
+ 01B84H 01B84H 00000H _INITEND_          INITDATA
+ 01B84H 01B84H 00000H _EXIT_             EXITDATA
+ 01B84H 01B84H 00000H _EXITEND_          EXITDATA
+ 01B84H 01BC5H 00042H _BSS               BSS
+ 01BC6H 01BC6H 00000H _BSSEND            BSSEND
+ 01BD0H 01C4FH 00080H _STACK             STACK
+
+  Address         Publics by Name
+
+ 017F:0000       DATASEG@
+ 0000:028D       DGROUP@
+ 0000:0278       _abort
+ 0000:0652       _atexit
+ 0000:0DEA       _brk
+ 017F:0094       _errno
+ 0000:06C4       _exit
+ 0000:10A0       _fflush
+ 0000:111D       _flushall
+ 0000:1155       _fprintf
+ 0000:12E4       _fputc
+ 0000:1409       _fputchar
+ 0000:116B       _fputs
+ 0000:0E25       _free
+ 0000:11FF       _fseek
+ 0000:1263       _ftell
+ 0000:074A       _isatty
+ 0000:07F5       _lseek
+ 0000:0EF4       _malloc
+ 0000:12AE       _memcpy
+ 0000:104B       _realloc
+ 0000:0DF6       _sbrk
+ 0000:15AB       _setvbuf
+ 0000:1675       _strlen
+ 0000:08BB       _tell
+ 0000:0291       _yylex
+ 0000:1000  Abs  __AHINCR
+ 0000:000C  Abs  __AHSHIFT
+ 017F:010E       __atexitcnt
+ 017F:0394       __atexittbl
+ 017F:00A2       __brklvl
+ 017F:0084       __C0argc
+ 017F:0086       __C0argv
+ 017F:0088       __C0environ
+ 0000:06E5       __cexit
+ 0000:016F       __checknull
+ 0000:015C       __cleanup
+ 0000:0000  Abs  __cvtfak
+ 0000:06F3       __c_exit
+ 017F:0282       __doserrno
+ 0000:0738       __DOSERROR
+ 017F:0284       __dosErrorToSV
+ 017F:008A       __envLng
+ 017F:008C       __envseg
+ 017F:008E       __envSize
+ 0000:06D3       __exit
+ 017F:0110       __exitbuf
+ 017F:0112       __exitfopen
+ 017F:0114       __exitopen
+ 017F:037A       __first
+ 0000:12CD       __fputc
+ 0000:141A       __FPUTN
+ 017F:009E       __heapbase
+ 017F:0280       __heaplen
+ 017F:00A6       __heaptop
+ 017F:0074       __Int0Vector
+ 017F:0078       __Int4Vector
+ 017F:007C       __Int5Vector
+ 017F:0080       __Int6Vector
+ 0000:06FF       __IOERROR
+ 017F:037C       __last
+ 0000:075B       __LONGTOA
+ 0000:028F       __MMODEL
+ 017F:0256       __nfile
+ 017F:0258       __openfd
+ 017F:0092       __osmajor
+ 017F:0093       __osminor
+ 017F:0092       __osversion
+ 017F:0090       __psp
+ 0000:109C       __REALCVT
+ 017F:0386       __RealCvtVector
+ 0000:01EC       __restorezero
+ 017F:037E       __rover
+ 017F:0388       __ScanTodVector
+ 0000:081E       __setupio
+ 017F:0096       __StartTime
+ 017F:02DE       __stklen
+ 017F:0116       __streams
+ 0000:0197       __terminate
+ 0000:07D8       __UTOA
+ 017F:0092       __version
+ 0000:08E9       __VPRINTER
+ 0000:1793       __write
+ 0000:17CD       __xfflush
+ 0000:0D97       ___brk
+ 017F:009C       ___brklvl
+ 017F:009A       ___heapbase
+ 0000:0DB9       ___sbrk
+ 0000:168F       ___write
+
+  Address         Publics by Value
+
+ 0000:0000  Abs  __cvtfak
+ 0000:000C  Abs  __AHSHIFT
+ 0000:1000  Abs  __AHINCR
+ 0000:015C       __cleanup
+ 0000:016F       __checknull
+ 0000:0197       __terminate
+ 0000:01EC       __restorezero
+ 0000:0278       _abort
+ 0000:028D       DGROUP@
+ 0000:028F       __MMODEL
+ 0000:0291       _yylex
+ 0000:0652       _atexit
+ 0000:06C4       _exit
+ 0000:06D3       __exit
+ 0000:06E5       __cexit
+ 0000:06F3       __c_exit
+ 0000:06FF       __IOERROR
+ 0000:0738       __DOSERROR
+ 0000:074A       _isatty
+ 0000:075B       __LONGTOA
+ 0000:07D8       __UTOA
+ 0000:07F5       _lseek
+ 0000:081E       __setupio
+ 0000:08BB       _tell
+ 0000:08E9       __VPRINTER
+ 0000:0D97       ___brk
+ 0000:0DB9       ___sbrk
+ 0000:0DEA       _brk
+ 0000:0DF6       _sbrk
+ 0000:0E25       _free
+ 0000:0EF4       _malloc
+ 0000:104B       _realloc
+ 0000:109C       __REALCVT
+ 0000:10A0       _fflush
+ 0000:111D       _flushall
+ 0000:1155       _fprintf
+ 0000:116B       _fputs
+ 0000:11FF       _fseek
+ 0000:1263       _ftell
+ 0000:12AE       _memcpy
+ 0000:12CD       __fputc
+ 0000:12E4       _fputc
+ 0000:1409       _fputchar
+ 0000:141A       __FPUTN
+ 0000:15AB       _setvbuf
+ 0000:1675       _strlen
+ 0000:168F       ___write
+ 0000:1793       __write
+ 0000:17CD       __xfflush
+ 017F:0000       DATASEG@
+ 017F:0074       __Int0Vector
+ 017F:0078       __Int4Vector
+ 017F:007C       __Int5Vector
+ 017F:0080       __Int6Vector
+ 017F:0084       __C0argc
+ 017F:0086       __C0argv
+ 017F:0088       __C0environ
+ 017F:008A       __envLng
+ 017F:008C       __envseg
+ 017F:008E       __envSize
+ 017F:0090       __psp
+ 017F:0092       __osversion
+ 017F:0092       __osmajor
+ 017F:0092       __version
+ 017F:0093       __osminor
+ 017F:0094       _errno
+ 017F:0096       __StartTime
+ 017F:009A       ___heapbase
+ 017F:009C       ___brklvl
+ 017F:009E       __heapbase
+ 017F:00A2       __brklvl
+ 017F:00A6       __heaptop
+ 017F:010E       __atexitcnt
+ 017F:0110       __exitbuf
+ 017F:0112       __exitfopen
+ 017F:0114       __exitopen
+ 017F:0116       __streams
+ 017F:0256       __nfile
+ 017F:0258       __openfd
+ 017F:0280       __heaplen
+ 017F:0282       __doserrno
+ 017F:0284       __dosErrorToSV
+ 017F:02DE       __stklen
+ 017F:037A       __first
+ 017F:037C       __last
+ 017F:037E       __rover
+ 017F:0386       __RealCvtVector
+ 017F:0388       __ScanTodVector
+ 017F:0394       __atexittbl
+
+Error: Undefined symbol _main in module c0.ASM
+Error: Undefined symbol _yylval in module YYLEX.C
+Error: Undefined symbol _nmstr in module YYLEX.C
+Error: Undefined symbol _sectnum in module YYLEX.C
+Error: Undefined symbol _accnum in module YYLEX.C
+Error: Undefined symbol _trace in module YYLEX.C
+Error: Undefined symbol _synerr in module YYLEX.C
+Error: Undefined symbol _eofseen in module YYLEX.C
+Error: Undefined symbol _flexscan in module YYLEX.C
+Program entry point at 0000:0000
+

@@ -1,0 +1,50 @@
+%{
+#include <stdio.h>
+#include <conio.h>
+#include "c:\turboc3\bin\bison\prog.h"
+%}
+identificador [a-z]
+constante [0-9]
+opsuma [+]
+opresta [-]
+opdiv [/]
+opmul [*]
+opmod [%]
+asignacion [=]
+pari [(]
+pard [)]
+separador [;]
+llai [{]
+llad [}]
+palm [M]
+pala [A]
+palr [R]
+pald [D]
+pali [I]
+palw [W]
+%%
+{identificador}       {yylval.identificador=yytext[0];
+			return VAR;}
+
+{constante}           {yylval.constante=yytext[0];
+			return NUM;}
+
+{opsuma} {return ADD;}
+{opresta} {return SUB;}
+{opdiv} {return DIV;}
+{opmul} {return MUL;}
+{opmod} {return MOD;}
+{asignacion} {return ASIG;}
+{pari} {return PARI;}
+{pard} {return PARD;}
+{separador} {return PCO;}
+{llai} {return LLAI;}
+{llad} {return LLAD;}
+{palm} {return PALM;}
+{pala} {return PALA;}
+{palr} {return PALR;}
+{pald} {return PALD;}
+{pali} {return PALI;}
+[ \t\n] ;
+%%
+
