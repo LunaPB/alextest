@@ -1,0 +1,27 @@
+%{
+
+/* Este es el primer ejemplo de flex
+para el componente lexico identificador */
+
+#include <conio.h>
+#include <stdio.h>
+int contador=0;
+
+%}
+
+letra [a-zA-Z]
+digito [0-9]
+identificador {letra}({letra}|{digito})*
+
+%%
+
+{identificador} {contador++;
+		 printf("Token identificador numero: %s %d \n",yytext, contador);
+                }
+
+%%
+
+void main(void)
+{
+yylex();
+}

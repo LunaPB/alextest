@@ -1,0 +1,5 @@
+M {R a; R b; R c;
+p=a+b+c;
+q=a *a + b *b + c *c;
+r= ((p +q) *(p - q)) /((p*p)-(q*q));
+W p; W q; W r}
